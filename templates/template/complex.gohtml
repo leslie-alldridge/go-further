@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+</head>
+<body>
+<h1>Complex</h1>
+
+<ul>
+    {{range .Person}}
+    <li>{{.Location}} - {{.Age}}</li>
+    {{end}}
+</ul>
+
+<ul>
+    {{range .Home}}
+    <li>{{.Street}} - {{.Value}}</li>
+    {{end}}
+</ul>
+
+</body>
+</html>
