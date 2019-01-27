@@ -6,9 +6,19 @@
 </head>
 <body>
 
+{{/* 
 Without date formatting: {{.}}
 
-With date formatting: {{fdateMDY .}}
+With date formatting: {{fdateMDY .}} */}}
+
+{{.}}
+
+{{. | fdbl }}
+
+{{. | fdbl | fsq }}
+
+{{. | fdbl | fsq | fsqrt}}
+
 
 </body>
 </html>
