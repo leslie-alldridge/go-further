@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Put it all together</title>
+</head>
+<body>
+{{.Fall.Term}}<br/>
+{{range .Fall.Courses}}
+{{.Number}} - {{.Name}} - {{.Units}}<br/>
+{{end}}
+<hr/>
+{{.Spring.Term}}<br/>
+{{range .Spring.Courses}}
+{{.Number}} - {{.Name}} - {{.Units}}<br/>
+{{end}}
+</body>
+</html>
