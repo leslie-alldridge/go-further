@@ -11,6 +11,7 @@ Learn Golang daily and improve on my current skills
 - [Random Number Generator API](https://github.com/leslie-alldridge/all-systems-are-GO)
 
 ## Where to next?
-- Continuing to learn intermediate / advanced Golang in this repository via Udemy
-- Build out a complete websocket chat bot in Go
-- Utilise my CRUD Api in a React Application / Boilerplate repository for future reference
+* Continuing to learn intermediate / advanced Golang in this repository via Udemy
+* Build out a complete websocket chat bot in Go
+* Utilise my CRUD Api in a React Application / Boilerplate repository for future reference
+* Building a Go backend with CRUD actions and authentication (so all it needs is a nice frontend)
