@@ -2,28 +2,21 @@ package main
 
 import (
 	"html/template"
-	"log"
 	"net/http"
 )
 
+var tpl *template.Template
+
+func init() {
+	tpl = template.Must(template.ParseFiles("templates/index.gohtml"))
+}
+
 func main() {
-	http.HandleFunc("/", dog)
-	http.HandleFunc("/bella.jpg", catPic)
+	http.HandleFunc("/", index)
+	http.Handle("/public/", http.StripPrefix("/public", http.FileServer(http.Dir("public"))))
 	http.ListenAndServe(":8080", nil)
 }
 
-func dog(w http.ResponseWriter, req *http.Request) {
-	tpl, err := template.ParseFiles("./templates/cat.gohtml")
-	if err != nil {
-		log.Fatalln("error with template", err)
-	}
-
-	err = tpl.ExecuteTemplate(w, "cat.gohtml", "Leslie")
-	if err != nil {
-		log.Fatalln("error executing the template", err)
-	}
-}
-
-func catPic(w http.ResponseWriter, req *http.Request) {
-	http.ServeFile(w, req, "bella.jpg")
+func index(w http.ResponseWriter, _ *http.Request) {
+	tpl.ExecuteTemplate(w, "index.gohtml", nil)
 }
