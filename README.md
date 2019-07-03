@@ -1,7 +1,7 @@
 # go-further
 
 ## Goal 
-Learn Golang daily and improve on my current skills
+Learn Golang and improve on my current skills
 
 ## Current Knowledge
 - [CRUD Api with Database](https://github.com/leslie-alldridge/golang-crud-api)
